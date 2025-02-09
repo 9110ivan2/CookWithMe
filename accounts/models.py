@@ -2,23 +2,14 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, User 
 
 
-class User(AbstractUser):
+class User_customer(AbstractUser):
+    #TODO problem with the user class needs to be renamed due to User built-in naming 
 
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=True) #TODO the email column is not unique in the db postgres has to be changed.
 
     REQUIRED_FIELDS = ["email"]
-
-    groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='customer_user_set',
-        blank=True
-    )
-    user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='custom_user_permissions_set',
-        blank=True
-
-    )
+    groups = None
+    user_permissions = None
 
     def __str__(self):
         return self.username

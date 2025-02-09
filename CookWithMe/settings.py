@@ -84,7 +84,7 @@ WSGI_APPLICATION = "CookWithMe.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "coockwithme",
+        "NAME": "cookwithme",
         "USER": "postgres",
         "PASSWORD": "postgres",
         "HOST": "localhost",
