@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser, User
 
 
 class User_customer(AbstractUser):
-    #TODO problem with the user class needs to be renamed due to User built-in naming 
+
 
     email = models.EmailField(unique=True) #TODO the email column is not unique in the db postgres has to be changed.
 
