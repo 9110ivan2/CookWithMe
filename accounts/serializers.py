@@ -1,7 +1,7 @@
 from rest_framework import serializers 
 from django.contrib.auth.models import AbstractUser, User
 
-from accounts.models import User, Profile
+from accounts.models import User_customer, Profile
 
 class UserSerializer(serializers.ModelSerializer):
 
@@ -21,3 +21,6 @@ class UserSerializer(serializers.ModelSerializer):
         )   
         return user
         
+
+class ProfileSerializer(serializers.ModelSerializer):
+    pass

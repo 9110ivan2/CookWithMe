@@ -1,18 +1,18 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser, User 
+from django.contrib.auth.models import User 
 
 
-class User_customer(AbstractUser):
+# class User_customer(User):
 
+#  ##TODO research why a do we need an AbstractUser can I just use User instead it will easy the process. 
+#    # email = models.EmailField(unique=True) #TODO the email column is not unique in the db postgres has to be changed.
 
-    email = models.EmailField(unique=True) #TODO the email column is not unique in the db postgres has to be changed.
+#     REQUIRED_FIELDS = ["email"]
+#     groups = None
+#     user_permissions = None
 
-    REQUIRED_FIELDS = ["email"]
-    groups = None
-    user_permissions = None
-
-    def __str__(self):
-        return self.username
+#     def __str__(self):
+#         return self.username
 
 
 class Profile(models.Model):
