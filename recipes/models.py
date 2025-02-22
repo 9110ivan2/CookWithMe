@@ -1,14 +1,15 @@
 from django.db import models
 from django.conf import settings
 from django.utils.text import slugify
-from accounts.models import User_customer
+from accounts.models import Profile
+from django.contrib.auth.models import User
 
 
 
 # Create your models here.
 
 class Recipe(models.Model):
-    author = models.ForeignKey(User_customer, on_delete=models.CASCADE, related_name='profile') 
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='recipes') 
     title = models.CharField(max_length=255)
     description = models.TextField()
     instructions = models.TextField()

@@ -1,7 +1,7 @@
 from rest_framework import serializers 
-from django.contrib.auth.models import AbstractUser, User
+from django.contrib.auth.models import User
 
-from accounts.models import User_customer, Profile
+from accounts.models import Profile
 
 class UserSerializer(serializers.ModelSerializer):
 
