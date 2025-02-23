@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     "reviews",
     "favorites",
     "rest_framework",
-    #"accounts.User",
+    "django_extensions"
+ 
 ]
 
 MIDDLEWARE = [
