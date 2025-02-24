@@ -3,7 +3,7 @@ from recipes.models import Recipe
 
 # Create your models here.
 class Ingredient(models.Model):
-    name = models.CharField(max_length=100, unique=True) #TODO explain why it should be unique 
+    name = models.CharField(max_length=100, unique=True) 
     description = models.TextField(blank=True, unique=True)
 
     def __str__(self):
