@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
-from rest_framework.authtoken.models import Token
+# from rest_framework.authtoken.models import Token
 from rest_framework.authentication import TokenAuthentication
 
 # Create your views here.
@@ -32,7 +32,7 @@ class RegisterView(APIView):
             return Response(serializer.data, status=201)
         return Response(serializer.errors, status=400)
 
-class Login(APIView):
+class LoginView(APIView):
     permission_classes = []  # Allow any user to login
     def post(self, request, *args, **kwargs):
         username = request.data.get('username')
@@ -45,7 +45,7 @@ class Login(APIView):
                 {"error": "Invalid credentials"},
                 status=status.HTTP_401_UNAUTHORIZED)
         
-class Logout(APIView):
+class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
     authentication_classes = [TokenAuthentication]
 
