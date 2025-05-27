@@ -25,6 +25,10 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),
     path("api/register/", RegisterView.as_view(),name='register'),
     path("api/login/", LoginView.as_view(), name='login'),
-    path("api/logout/",LogoutView.as_view(), name='logout')
-   # path("categories/",include("categories.urls"))
+    path("api/logout/",LogoutView.as_view(), name='logout'),
+    path("categories/",include("categories.urls")),
+    path("recipes/", include("recipes.urls")),
+    path("favorites/", include("favorites.urls")),
+    path("ingredients/", include("ingredients.urls")),
+
 ]
