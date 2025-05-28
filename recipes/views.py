@@ -1,4 +1,4 @@
-from django.shortcuts import generics
+from rest_framework import generics
 from recipes.models import Recipe
 from recipes.serializers import RecipeSerializer
 from recipes.filters import RecipeFilter
@@ -12,7 +12,7 @@ class RecipeListCreateView(generics.ListCreateAPIView):
     filterset_class = RecipeFilter
 
 
-class RecipeDetailView(generics.RetrieveUpdateDestoryAPIView):
+class RecipeDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
 

@@ -1,14 +1,14 @@
-from rest_framework import serializer
+from rest_framework import serializers
 from ingredients.models import Ingredient, RecipeIngredient
 
 
-class IgredientSerializer(serializer.ModelSerializer):
+class IgredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Ingredient
         fields = "__all__"
 
 
-class RecipeIngredientSerializer(serializer.ModelSerializer):
+class RecipeIngredientSerializer(serializers.ModelSerializer):
     class Meta:
         model = RecipeIngredient
         fields = "__all__"

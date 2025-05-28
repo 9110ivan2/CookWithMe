@@ -1,4 +1,4 @@
-from django.shortcuts import generics
+from rest_framework import generics
 from ingredients.models import Ingredient, RecipeIngredient
 from ingredients.serializers import IgredientSerializer, RecipeIngredientSerializer
 
@@ -6,7 +6,7 @@ class IngredientListCreateView(generics.ListCreateAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IgredientSerializer
 
-class IngredientDetailView(generics.RetrieveUpdateDestoryAPIView):
+class IngredientDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ingredient.objects.all()
     serializer_class = IgredientSerializer
 

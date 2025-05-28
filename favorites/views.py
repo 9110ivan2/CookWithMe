@@ -1,4 +1,4 @@
-from django.shortcuts import generics
+from rest_framework import generics
 from favorites.models import Favorites
 from favorites.serializers import FavoritesSerializer
 

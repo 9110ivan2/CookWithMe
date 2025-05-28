@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     "reviews",
     "favorites",
     "rest_framework",
-    "django_extensions"
+    "django_extensions",
+    "rest_framework.authtoken"
  
 ]
 
