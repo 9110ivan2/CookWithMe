@@ -30,5 +30,4 @@ urlpatterns = [
     path("recipes/", include("recipes.urls")),
     path("favorites/", include("favorites.urls")),
     path("ingredients/", include("ingredients.urls")),
-
 ]
