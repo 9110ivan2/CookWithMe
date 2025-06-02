@@ -19,6 +19,11 @@ class Recipe(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     slug = models.SlugField(unique=True, blank=True, null=True)
+    categories = models.ManyToManyField(
+        'categories.Category', 
+        related_name='recipes', 
+        blank=True
+    )
 
     def save(self, *args, **kwargs):
         if not self.slug:
