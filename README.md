@@ -150,7 +150,8 @@ Here are the main API endpoints for CookWithMe:
 To test the API, you can use Postman:
 
 1. Open Postman.
-2. Import the API collection or manually create requests using the endpoints above.
-3. For endpoints that require authentication, obtain a token or session cookie by logging in, and include it in your request headers.
+2. Select **File** and browse to the location of the `CookWithMe.postman_collection.json` file found in the `postman` directory of this project.
+3. Import the API collection or manually create requests using the endpoints above.
+4. For endpoints that require authentication, obtain a token by logging in, and include it in your request headers.
 
 This README provides a comprehensive guide to setting up and running the CookWithMe project, including how to register and log in as a user, and interact with the API endpoints. Adjust any specific URLs or paths according to your actual project setup.
