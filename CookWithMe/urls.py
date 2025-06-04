@@ -30,4 +30,5 @@ urlpatterns = [
     path("recipes/", include("recipes.urls")),
     path("favorites/", include("favorites.urls")),
     path("ingredients/", include("ingredients.urls")),
+    # path("reviews/", include("reviews.urls")) not needed as reviews are included in recipes.urls
 ]
