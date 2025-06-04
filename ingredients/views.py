@@ -1,8 +1,10 @@
 from rest_framework import generics
 from ingredients.models import Ingredient, RecipeIngredient
 from ingredients.serializers import IgredientSerializer, RecipeIngredientSerializer
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 class IngredientListCreateView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Ingredient.objects.all()
     serializer_class = IgredientSerializer
 
