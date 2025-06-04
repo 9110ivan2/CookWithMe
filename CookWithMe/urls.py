@@ -28,7 +28,7 @@ urlpatterns = [
     path("api/logout/",LogoutView.as_view(), name='logout'),
     path("categories/",include("categories.urls")),
     path("recipes/", include("recipes.urls")),
-    path("favorites/", include("favorites.urls")),
+    # path("favorites/", include("favorites.urls")),
     path("ingredients/", include("ingredients.urls")),
     # path("reviews/", include("reviews.urls")) not needed as reviews are included in recipes.urls
 ]
